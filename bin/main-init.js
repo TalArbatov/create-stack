@@ -12,5 +12,8 @@ program
 shelljs.exec('running ShellJS...');
 console.log('running console.log()...');
 
-shelljs.exec('git init && git clone https://github.com/TalArbatov/MernStack.git');
+shelljs.exec('git init &&'+
+             'git clone https://github.com/TalArbatov/MernStack.git temp &&' + 
+             'mv temp/* ./ &&' + 
+             'rm -rf temp');
 
